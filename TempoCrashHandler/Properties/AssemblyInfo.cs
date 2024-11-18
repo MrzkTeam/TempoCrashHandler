@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TempoCrashHandler")]
 [assembly: AssemblyDescription("Tempo Crash Handler")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Mrzkteam")]
+[assembly: AssemblyCompany("MrzkTeam")]
 [assembly: AssemblyProduct("TempoCrashHandler")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]

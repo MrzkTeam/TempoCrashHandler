@@ -23,7 +23,7 @@ namespace TempoCrashHandler
         {
             if (Debugger.IsAttached)
             {
-                args = new string[] { "NULL OBJECT REFERENCE", "Template text", "tempo-crash-2024-11-17-21-06-04" };
+                args = new string[] { "NULL OBJECT REFERENCE", "Template text", "tempo-crash-2024-11-17-21-06-04", "github", "lol"};
 
                 Console.WriteLine("Running in Debug Mode!");
             }

@@ -40,8 +40,6 @@ namespace TempoCrashHandler
         {
             string msg = this.info[0].ToUpper();
             string info = this.info[1].Replace("$", "\n");
-            string git_link = "https://github.com/MrzkTeam/FNF-TempoEngine/issues";
-            string reportInfo = "Report to: " + git_link + "\n" + "'" + this.info[2] + "'" + " - Saved to 'logs/'";
 
             Font LeFont = LoadFont(path + "/resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
             Font LeFontBold = LoadFont(path + "/resource/Inconsolata-Bold.ttf", 20, FontStyle.Bold).Font;
@@ -61,7 +59,7 @@ namespace TempoCrashHandler
             reportInfoLabel.Font = LeFont;
 
             reportLabelButton.Parent = background;
-            reportLabelButton.Text = git_link;
+            reportLabelButton.Text = this.info[3];
             reportLabelButton.Font = LeFont;
 
             savedInfoLabel.Parent = background;
@@ -87,7 +85,7 @@ namespace TempoCrashHandler
 
         private void StartGitSite(object sender, EventArgs e)
         {
-            string cmd = "https://github.com/MrzkTeam/FNF-TempoEngine/issues";
+            string cmd = info[3];
             Process.Start(cmd);
         }
 
@@ -119,7 +117,7 @@ namespace TempoCrashHandler
 
         private void RestartButton_Click(object sender, EventArgs e)
         {
-            string cmd = path + "/TMPEngine.exe";
+            string cmd = path + "/" + info[4];
             Process.Start(cmd);
             Application.Exit();
         }
