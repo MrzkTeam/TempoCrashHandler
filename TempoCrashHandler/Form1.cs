@@ -63,7 +63,7 @@ namespace TempoCrashHandler
             reportLabelButton.Font = LeFont;
 
             savedInfoLabel.Parent = background;
-            savedInfoLabel.Text = "'" + this.info[2] + "'" + " - Saved to 'logs/'";
+            savedInfoLabel.Text = "'" + this.info[2] + "'" + " - Dumped";
             savedInfoLabel.Font = LeFont;
 
             restartButton.Text = "Restart";
