@@ -38,17 +38,17 @@ namespace TempoCrashHandler
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string msg = this.info[0].ToUpper();
-            string info = this.info[1].Replace("$", "\n");
+            string msg = this.info[0].ToUpper().Replace('"', ' ');
+            string info = this.info[1].Replace("$", "\n").Replace('"', ' ');
 
-            Font LeFont = LoadFont(path + "/resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
-            Font LeFontBold = LoadFont(path + "/resource/Inconsolata-Bold.ttf", 20, FontStyle.Bold).Font;
+            Font LeFont = LoadFont(path + "/Resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
+            Font LeFontBold = LoadFont(path + "/Resource/Inconsolata-Bold.ttf", 22, FontStyle.Bold).Font;
 
-            background.ImageLocation = path + "/engine/crashHandlerBG.png";
+            background.ImageLocation = path + "/Resource/CrashDialogBG.png";
 
             msgLabel.Parent = background;
             msgLabel.Text = msg;
-            msgLabel.Font = LoadFont(path + "/resource/Inconsolata-Bold.ttf", 22, FontStyle.Bold).Font;
+            msgLabel.Font = LoadFont(path + "/Resource/Inconsolata-Bold.ttf", 22, FontStyle.Bold).Font;
 
             infoLabel.Parent = background;
             infoLabel.Text = info;
@@ -59,11 +59,11 @@ namespace TempoCrashHandler
             reportInfoLabel.Font = LeFont;
 
             reportLabelButton.Parent = background;
-            reportLabelButton.Text = this.info[3];
+            reportLabelButton.Text = this.info[3].Replace('"', ' ');
             reportLabelButton.Font = LeFont;
 
             savedInfoLabel.Parent = background;
-            savedInfoLabel.Text = "'" + this.info[2] + "'" + " - Dumped";
+            savedInfoLabel.Text = "'" + this.info[2].Replace('"', ' ') + "'" + " - Dumped";
             savedInfoLabel.Font = LeFont;
 
             restartButton.Text = "Restart";
@@ -71,16 +71,16 @@ namespace TempoCrashHandler
             restartButton.Parent = background;
             restartButton.BackColor = Color.FromArgb(0x7809302C);
             restartButton.ForeColor = Color.White;
-            restartButton.FlatAppearance.MouseDownBackColor = Color.White;
-            restartButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x7809302C);
+            restartButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x7EB9FFEE);
+            restartButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x7F188075);
 
             exitButton.Text = "Exit";
             exitButton.Font = LeFontBold;
             exitButton.Parent = background;
             exitButton.BackColor = Color.FromArgb(0x7809302C);
             exitButton.ForeColor = Color.White;
-            exitButton.FlatAppearance.MouseDownBackColor = Color.White;
-            exitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x7809302C);
+            exitButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0x7EB9FFEE);
+            exitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0x7F188075);
         }
 
         private void StartGitSite(object sender, EventArgs e)
@@ -92,16 +92,19 @@ namespace TempoCrashHandler
         private void ReportInfo_Hover(object sender, EventArgs e)
         {
             reportLabelButton.ForeColor = Color.Yellow;
+            reportLabelButton.Font = LoadFont(path + "/Resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
         }
 
         private void SavedInfo_Hover(object sender, EventArgs e)
         {
             savedInfoLabel.ForeColor = Color.Yellow;
+            savedInfoLabel.Font = LoadFont(path + "/Resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
         }
 
         private void SavedInfo_Leave(object sender, EventArgs e)
         {
             savedInfoLabel.ForeColor = Color.White;
+            savedInfoLabel.Font = LoadFont(path + "/Resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
         }
 
         private void StartFileDir(object sender, EventArgs e)
@@ -113,6 +116,7 @@ namespace TempoCrashHandler
         private void ReportInfo_Leave(object sender, EventArgs e)
         {
             reportLabelButton.ForeColor = Color.White;
+            reportLabelButton.Font = LoadFont(path + "/Resource/Inconsolata-Regular.ttf", 16, FontStyle.Regular).Font;
         }
 
         private void RestartButton_Click(object sender, EventArgs e)
