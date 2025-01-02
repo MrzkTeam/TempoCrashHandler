@@ -1,5 +1,5 @@
 # Tempo Crash Handler
-Program for [Tempo Engine](https://github.com/MrzkTeam/FNF-TempoEngine) when the game crashes and shows dialog.
+Program for [Tempo Engine](https://github.com/MrzkTeam/Tempo.Engine) when the game crashes and shows dialog.
 
 ## Getting Started
 **FIRST, FOR BEFORE TESTING THIS PROGRAM, RECOMMENDED LAUNCH IN [DEBUG]() MODE!**
